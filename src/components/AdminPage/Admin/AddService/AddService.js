@@ -14,7 +14,7 @@ const AddService = (props) => {
 
   const onSubmit = (data) => {
     const serviceData = { ...data, imgUrl }
-    fetch('http://localhost:5000/add-service', {
+    fetch('https://enigmatic-waters-35472.herokuapp.com/add-service', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

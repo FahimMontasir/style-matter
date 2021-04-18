@@ -7,7 +7,6 @@ import Advantages from '../Advantages/Advantages';
 import AboutUs from '../AboutUs/AboutUs';
 import ReviewDetails from '../ReviewDetails/ReviewDetails';
 import Footer from '../Footer/Footer';
-import { Route, Switch } from 'react-router';
 
 const HomeRoute = (props) => {
   const classes = useStyle();

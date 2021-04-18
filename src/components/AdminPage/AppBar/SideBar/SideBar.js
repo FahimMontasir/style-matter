@@ -27,7 +27,7 @@ const SideBar = (props) => {
 
   const [userInfo, setUserInfo, isAdmin, setIsAdmin] = useContext(userContext);
   useEffect(() => {
-    fetch(`http://localhost:5000/admin/${userInfo.email}`)
+    fetch(`https://enigmatic-waters-35472.herokuapp.com/admin/${userInfo.email}`)
       .then(res => res.json())
       .then(data => setIsAdmin(data.length > 0));
   }, [setIsAdmin, userInfo.email])

@@ -12,12 +12,12 @@ const OrderList = (props) => {
   }
   const [orders, setOrders] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/checkout')
+    fetch('https://enigmatic-waters-35472.herokuapp.com/checkout')
       .then(res => res.json())
       .then(data => setOrders(data));
   }, [])
   const handleUpdate = (id) => {
-    fetch(`http://localhost:5000/update/${id}`, {
+    fetch(`https://enigmatic-waters-35472.herokuapp.com/update/${id}`, {
       method: 'PATCH',
       headers: {
         'Accept': 'application/json',

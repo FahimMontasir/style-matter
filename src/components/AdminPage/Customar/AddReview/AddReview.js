@@ -10,7 +10,7 @@ const AddReview = (props) => {
 
   const onSubmit = (data) => {
     const reviewData = { ...data, ...userInfo };
-    fetch('http://localhost:5000/add-review', {
+    fetch('https://enigmatic-waters-35472.herokuapp.com/add-review', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

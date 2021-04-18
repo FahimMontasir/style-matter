@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles, Typography, Container } from '@material-ui/core';
 import AppCard from '../../../utils/AppCard/AppCard';
-import logo from "../../../images/logo.png"
 import { useHistory } from 'react-router';
 const ServiceDetails = (props) => {
   const classes = useStyle();
@@ -9,7 +8,7 @@ const ServiceDetails = (props) => {
 
   const [serviceData, setServiceData] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/all-services')
+    fetch('https://enigmatic-waters-35472.herokuapp.com/all-services')
       .then(res => res.json())
       .then(data => setServiceData(data));
   }, [])

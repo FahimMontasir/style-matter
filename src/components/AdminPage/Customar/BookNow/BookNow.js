@@ -15,7 +15,7 @@ const BookNow = (props) => {
 
   const onSubmit = (data) => {
     const checkoutData = { ...data, title, description, status: "pending", paymentId }
-    fetch('http://localhost:5000/checkout', {
+    fetch('https://enigmatic-waters-35472.herokuapp.com/checkout', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -30,7 +30,7 @@ const BookNow = (props) => {
   const { id } = useParams();
   useEffect(() => {
     if (id !== "noValidIdFound") {
-      fetch(`http://localhost:5000/service/${id}`)
+      fetch(`https://enigmatic-waters-35472.herokuapp.com/service/${id}`)
         .then(res => res.json())
         .then(data => setServiceInfo(data));
     }

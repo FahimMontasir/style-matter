@@ -6,7 +6,7 @@ const ReviewDetails = (props) => {
   const classes = useStyle();
   const [reviews, setReviews] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/all-review')
+    fetch('https://enigmatic-waters-35472.herokuapp.com/all-review')
       .then(res => res.json())
       .then(data => setReviews(data));
   }, [])

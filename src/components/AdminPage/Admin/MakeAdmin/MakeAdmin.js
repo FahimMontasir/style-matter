@@ -9,7 +9,7 @@ const MakeAdmin = (props) => {
   const [userInfo, setUserInfo, isAdmin] = useContext(userContext);
   const { control, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch('http://localhost:5000/add-admin', {
+    fetch('https://enigmatic-waters-35472.herokuapp.com/add-admin', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

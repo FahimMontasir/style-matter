@@ -9,7 +9,7 @@ const BookingList = (props) => {
   const [bookedList, setBookedList] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/checkout/${userInfo.email}`)
+    fetch(`https://enigmatic-waters-35472.herokuapp.com/checkout/${userInfo.email}`)
       .then(res => res.json())
       .then(data => setBookedList(data));
   }, [userInfo])

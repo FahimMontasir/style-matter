@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button, IconButton } from '@material-ui/core';
+import { makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, IconButton } from '@material-ui/core';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import { userContext } from '../../../../App';
 
@@ -9,14 +9,14 @@ const ManageService = (props) => {
   const [allServices, setAllServices] = useState([])
   const handleDelete = (id) => {
     setAllServices(allServices.filter(service => service._id !== id))
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://enigmatic-waters-35472.herokuapp.com/delete/${id}`, {
       method: 'DELETE',
     })
       .then(result => console.log(result))
       .catch(res => console.log(res))
   }
   useEffect(() => {
-    fetch('http://localhost:5000/all-services')
+    fetch('https://enigmatic-waters-35472.herokuapp.com/all-services')
       .then(res => res.json())
       .then(data => setAllServices(data));
   }, [])
